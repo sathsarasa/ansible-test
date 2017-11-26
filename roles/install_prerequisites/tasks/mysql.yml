@@ -1,8 +1,12 @@
-- name: Add MySQL Server repository
-  apt_repository: repo='deb http://repo.mysql.com/apt/debian/ jessie mysql-5.6' state=present
-
 - name: Install MySQL
   apt: name={{ item }} state=installed update-cache=yes 
   with_items:
     - mysql-server-5.7
     - mysql-client-5.7
+	
+- name: Update MySQL Root User Password
+  mysql_user: 
+    name=root
+    password={{ mysql_root_password }}
+    check_implicit_admin=yes
+    state=present

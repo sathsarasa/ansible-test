@@ -1,3 +1,4 @@
 --- # Include playbooks of all pre-requisites
 - import_tasks: java.yml
+- import_tasks: mysql.yml 
 - import_tasks: unzip.yml

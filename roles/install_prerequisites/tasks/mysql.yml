@@ -3,7 +3,7 @@
   with_items:
     - mysql-server-5.7
     - mysql-client-5.7
-    - python-mysqldb
+    - python-mysqldb							# This module required to update mysql password through ansible
 
 - name: Update MySQL Root User Password
   mysql_user: 

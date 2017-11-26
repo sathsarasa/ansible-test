@@ -1,0 +1,9 @@
+--- # Setup Mobile Connect Hub
+- hosts: debian
+  user: test
+  become: yes
+  connection: ssh
+  gather_facts: yes
+  
+  roles:
+    - install_prerequisites

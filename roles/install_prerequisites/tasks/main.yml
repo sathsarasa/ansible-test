@@ -1,0 +1,3 @@
+--- # Include playbooks of all pre-requisites
+- include: java.yml
+- include: unzip.yml

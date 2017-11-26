@@ -1,5 +1,5 @@
 - name: Install MySQL
-  apt: name={{ item }} state=installed update-cache=yes
+  apt: name={{ item }} state=installed update-cache=yes upgrade=yes
   with_items:
     - mysql-server-5.7
     - mysql-client-5.6

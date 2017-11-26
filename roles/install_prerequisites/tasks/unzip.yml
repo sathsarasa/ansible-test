@@ -1,2 +1,2 @@
 - name: Install Unzip Package
-  apt: name:unzip state=latest
+  apt: name=unzip state=latest
